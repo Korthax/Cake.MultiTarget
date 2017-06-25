@@ -3,7 +3,7 @@
 A Cake extension that hacks in the ability to pass in multiple targets (tasks) to run as comma separated values.
 
 [![cakebuild.net](https://img.shields.io/badge/WWW-cakebuild.net-blue.svg)](http://cakebuild.net/)
-[![NuGet Version](http://img.shields.io/nuget/v/Cake.MultiTarget.svg?style=flat)](https://www.nuget.org/packages/Cake.Path/)
+[![NuGet Version](http://img.shields.io/nuget/v/Cake.MultiTarget.svg?style=flat)](https://www.nuget.org/packages/Cake.MultiTarget/)
 
 
 ## Dependencies
@@ -12,7 +12,7 @@ A Cake extension that hacks in the ability to pass in multiple targets (tasks) t
 
 ## Usage
 
-1. Reference the addin:
+1. Reference the multitarget library:
 
 ```csharp
 #addin "Cake.MultiTarget"
