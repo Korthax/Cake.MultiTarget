@@ -32,6 +32,7 @@ RunMultiple.Targets(Task, RunTarget, Argument("target", "Default"));
 
 ## Example
 
+### Edit build.cake
 ```csharp
 #addin "Cake.MultiTarget"
 
@@ -52,6 +53,7 @@ Task("B")
 RunMultiple.Targets(Task, RunTarget, target);
 ```
 
+### Run build.cake
 ```powershell
 .\build.ps1 -Target "A,B"
 ```
