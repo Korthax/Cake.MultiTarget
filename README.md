@@ -1,6 +1,6 @@
 # Cake.MultiTarget
 
-A Cake extension that hacks in the ability to pass in multiple targets (tasks) to run as comma separated values.
+A Cake extension that hacks in the ability to pass in multiple targets (tasks) to run as comma separated values. It also provides the ability to run a target without running any of its dependencies.
 
 [![cakebuild.net](https://img.shields.io/badge/WWW-cakebuild.net-blue.svg)](http://cakebuild.net/)
 [![NuGet Version](http://img.shields.io/nuget/v/Cake.MultiTarget.svg?style=flat)](https://www.nuget.org/packages/Cake.MultiTarget/)
@@ -10,7 +10,8 @@ A Cake extension that hacks in the ability to pass in multiple targets (tasks) t
 
 * Cake v0.19.5
 
-## Usage
+## Multi Target
+### Usage
 
 1. Reference the multitarget library:
 
@@ -30,9 +31,9 @@ RunMultiple.Targets(Task, RunTarget, Argument("target", "Default"));
 .\build.ps1 -Target "A,B"
 ```
 
-## Example
+### Example
 
-### Edit build.cake
+#### Edit build.cake
 ```csharp
 #addin "Cake.MultiTarget"
 
@@ -53,9 +54,24 @@ Task("B")
 RunMultiple.Targets(Task, RunTarget, target);
 ```
 
-### Run build.cake
+#### Run build.cake
 ```powershell
 .\build.ps1 -Target "A,B"
+```
+
+## Isolated Target
+### Usage
+
+1. Reference the multitarget library:
+
+```csharp
+#addin "Cake.MultiTarget"
+```
+
+2. Instead of calling RunTarget at the end of your cake script call:
+
+```csharp
+RunIsolated.Target(Tasks, Task, RunTarget, Argument("target", "Default"));
 ```
 
 ## General Notes
